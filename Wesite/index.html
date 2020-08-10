@@ -1,0 +1,100 @@
+<html>
+   <head>
+    <link type="text/css" rel="stylesheet" href="main.css" />
+      <title> Welcome to the Wilderness!! </title>
+      <script>
+        function banner(){
+          var text = confirm("Did You Really Want to Click on My Banner?");
+          return text;
+        } 
+
+        function answer(){
+          var radio = document.getElementsByName("trivia");
+          var selection = false;
+          var message = "";
+          for( var i = 0; i < radio.length; i++) {
+           if(radio[i].value == "yes" && radio[i].checked == true) {
+           selection = true;
+           } //end if statement
+          } //end for loop
+           if(selection == true) {
+            message = message + "<b><p style='color:green'>Way to go!</p></b>";
+           } else {
+            message = message + "<b><p style='color:red'>Try again my friend.</p></b>";
+          }
+            document.getElementById("response").innerHTML = message;
+        } //end function answer
+
+      </script>
+   </head>
+
+   <body id="background">
+
+
+   <header id="banner"><center>Hello and Welcome to the Wilderness </center> </header> 
+     
+     <nav>
+      <ul id="navmenu">
+        <li class="navitem"> <a href="index.html"> Home </a> </li>
+        <li class="navitem"> <a href="games.html"> Games </a> </li>
+        <li class="navitem"> <a href="videos.html"> Videos </a> </li>
+      </ul>
+     </nav>
+  <div class="rightside">
+    <ol>
+      <img width="40%" src="https://thumbs.dreamstime.com/b/bull-moose-portrait-18178689.jpg" />
+      <img width="40%" src="https://images.stockfreeimages.com/1658/sfixl/16587658.jpg" />
+
+    <audio width="400" height="220" controls autoplay>
+       <source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+         Your browser does not support HTML 5 audio.
+    </audio>
+     <iframe width="400" height="200" src="https://www.youtube.com/embed/3SO-XpbaycM?rel=0"></iframe>
+
+     
+  </div> <!-- closing rightside div tag  -->
+
+    <div class="leftside">
+      <div class="wrap-trivia">
+     <h2>Baseball Trivia Question</h2>
+     <p class="paragraph">Who won the World Series in 1985?</p> 
+     <form> 
+      <div id= "response"> </div>
+       <input type="radio" name= "trivia" value="no"> Browns <br/>
+       <input type="radio" name="trivia" value="yes"> Royals <br>
+       <input type="radio" name="trivia" value="no"> Yankees <br>
+       <input type="radio" name="trivia" value="no"> Cubs <br>
+       <input onclick="answer()" type="button" value="Click Here" id="button">
+      
+     </form>
+    </div>
+
+    <div class="wrap-list">   
+     <ol>
+        <li class="listitem">The Moose were very large.</li>
+        <li class="listitem">The young moose were very curious.</li>
+        <li class="listitem">The area was very large and beautiful</li>
+      </div>
+
+      <h1><span class="wrap-text"> Moose Watching</span></h1>
+     <p> I was up at <strong>Yellowstone Park</strong> when the family was able to see Moose grazing.  <u>There was a mother Moose and her 2 young ones</u>.  They were <u>feeding</u> in the field on the side of the road.
+      
+   </div>  <!-- closing leftside div tag -->
+
+    <div class="clearfloat"></div>
+
+     
+  
+  
+
+     
+
+      <hr />
+      <center>Stacey<a href="https://www.upforeclothingandmore.com/">My Favorite Website</a></center>
+     
+    <footer id="footer">Stacey created this website. </footer> 
+
+    </body>
+</html>
+
+ 
